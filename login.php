@@ -8,7 +8,7 @@ if (isset($_GET['s'])) {
 }
 ?>
 
-<form action="./auth" method="post" class="p-6 rounded-lg w-full max-w-md ml-auto mr-auto pt-[70px]">
+<form action="./auth" method="post" class="p-6 rounded-lg w-full max-w-md mb-auto ml-auto mr-auto xl:pt-[70px] pt-[50%]">
     <h1 class="text-3xl font-bold mb-[50px] text-center text-gray-800">Iniciar sesión</h1>
 
     <div class="mb-4">
