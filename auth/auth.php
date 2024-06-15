@@ -1,12 +1,11 @@
 <?php
-require 'header.php';
+require '../layouts/header.php';
 require 'connect.php';
-echo '<div style="border: 1px solid white; width: fit-content; margin: auto; margin-top: 15px; text-align:center; padding:20px;">';
 // Validar los datos introducidos por el usuario
 if (isset($_GET['act'])) {
     if ($_GET['act'] == "logout") {
         session_destroy();
-        header("Location: login.php"); exit;
+        header("Location: login"); exit;
       }
 }
 $nombre_usuario = $_POST['nombre_usuario'];
@@ -27,15 +26,14 @@ if ($resultado->num_rows > 0 ) {
   $_SESSION['id_usuario'] = $fila['id'];
   $_SESSION['nombre_usuario'] = $fila['nombre'];
   // Redirigir al usuario a la página principal
-  header("Location: index.php");
+  header("Location: ../panel");
   } else {
-    echo "<br><h1 style='color: white;'>El nombre de usuario o la contraseña no son correctos<br><br><a href='login.php'>Volver</a></h1>";
+    echo "<div class='p-6 w-auto h-auto text-2xl font-semibold xl:pt-[10%] pt-[60%]'><p>¡El nombre de usuario o la contraseña no son correctos! <br> <a href='login'><button class='rounded-full bg-malo hover:bg-malodo transition duration-300 text-white p-2 mt-[10%] font-normal'>Regresar</button></a></p></div>";
   }
 } else {
   // El usuario no existe o la contraseña es incorrecta
-  echo "<br><h1 style='color: white;'>El nombre de usuario o la contraseña no son correctos<br><br><a href='login.php'>Volver</a></h1>";
+  echo "<div class='p-6 w-auto h-auto text-2xl font-semibold xl:pt-[10%] pt-[60%]'><p>¡El nombre de usuario o la contraseña no son correctos! <br> <a href='login'><button class='rounded-full bg-malo hover:bg-malodo transition duration-300 text-white p-2 mt-[10%] font-normal'>Regresar</button></a></p></div>";
 }
-echo '</div>';
 $conexion->close();
-require 'footer.php';
+require '../layouts/footer.php';
 ?>

@@ -1,4 +1,5 @@
 <?php
+// REMOVE THIS FILE
 require 'connect.php';
 require 'ut.php';
 $banana_phone = "google";

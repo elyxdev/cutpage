@@ -1,7 +1,7 @@
 <?php
-require 'header.php';
+require '../layouts/header.php';
 if ($_SESSION['lg_in'] == 1) {
-    header("Location: index.php"); exit;
+    header("Location: ../index"); exit;
 }
 if (isset($_GET['s'])) {
   echo "<script>alert('Registro exitoso, ahora inicie sesión.')</script>";
@@ -27,5 +27,5 @@ if (isset($_GET['s'])) {
   </form>
 
 <?php
-require 'footer.php';
+require '../layouts/footer.php';
 ?>
