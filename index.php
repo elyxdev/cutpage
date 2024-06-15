@@ -1,7 +1,7 @@
 <?php 
 require 'header.php';
 if ($_SESSION['lg_in'] != 1) {
-  header("Location: login.php"); exit;
+  header("Location: login"); exit;
 }
 ?>
 
