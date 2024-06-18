@@ -51,13 +51,6 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `usuarios`
---
-
-INSERT INTO `usuarios` (`id`, `nombre`, `correo_electronico`, `contrasena`) VALUES
-(1, 'pispitdev', 'yosmanrodriguezg@gmail.com', '$2y$10$EFJd4bkLwaRBkwQxoQ2mWuswBGfEojlcCB2sVAfv3ILyd.BAW3kci');
-
---
 -- Índices para tablas volcadas
 --
 
