@@ -48,8 +48,8 @@ return $realip;
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['remove'])) {
-    require 'header.php';
-    require 'connect.php';
+    require '../layouts/header.php';
+    require '../auth/connect.php';
     $remove = $_GET['remove'];
     $consulta = "SELECT * FROM direcciones WHERE direcciones.trackcode = '$remove'";
     $resultado = $conexion->query($consulta);
@@ -67,8 +67,6 @@ $consulta = "DELETE FROM direcciones WHERE direcciones.trackcode = '$remove'";
 $conexion->query($consulta);
 // Cerrar la conexión a la base de datos
 $conexion->close();
-echo '<div style="border: 1px solid white; width: fit-content; margin: auto; margin-top: 15px; text-align:center; padding:20px;">';
-echo "<br><h1 style='color: white;'>¡Acortador eliminado!<br><br><a href='me.php'>Volver</a></h1></div>";
+echo "<h2 class='text-2xl font-bold mb-[25px] pt-[80%] text-gray-800 xl:pt-[150px]'>¡Acortador eliminado!</h2>";
+echo "<a class='p-2 text-lg font-bold rounded-full bg-prpl hover:bg-azulnav text-white transition duration-200 mr-[20px]' href='".$rp."acortadores'>Volver</a>";
 }
-
-?>

@@ -23,12 +23,13 @@ if (file_exists($possible_core_route_a)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="<?php echo $rp; ?>/static/js/tailwind.config.js"></script>
-    <script src="<?php echo $rp; ?>/static/js/re.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/29d2b0da58.js" crossorigin="anonymous"></script>
+    <script src="<?php echo $rp; ?>static/js/tailwind.config.js"></script>
+    <script src="<?php echo $rp; ?>static/js/re.js"></script>
     <title>Cutpage</title>
 </head>
 <body class="font-sans w-[100%]">
@@ -42,11 +43,9 @@ if (file_exists($possible_core_route_a)) {
       <?php if ($_SESSION['lg_in'] == 1) {
                 // Sesión iniciada
                 // Acortar
-                echo '<a href="' .$rp. 'panel" class="mr-[22px]"><button class="bg-black rounded-full p-[4px] transition duration-200 hover:font-bold hover:text-prpl"><p class="font-medium text-lg pt-[3px]">Acortar</p></button></a>';
+                echo '<a href="' .$rp. 'panel" class="mr-[40px]"><button class="bg-black rounded-full p-[4px] transition duration-200 hover:font-bold hover:text-prpl"><p class="font-medium text-lg pt-[3px]">Acortar</p></button></a>';
                 // Acortadores
-                echo '<a href="acortadores" class="mr-[22px]"><button class="bg-black rounded-full p-[4px] transition duration-200 hover:font-bold hover:text-prpl"><p class="font-medium text-lg pt-[3px]">Mis acortadores</p></button></a>';
-                // Perfil
-                echo '<a href="perfil"><button class="bg-black rounded-full p-[4px] transition duration-200 hover:font-bold hover:text-prpl"><p class="font-medium text-lg pt-[3px]">Perfil</p></button></a>';
+                echo '<a href="' .$rp.'acortadores" class="mr-[22px]"><button class="bg-black rounded-full p-[4px] transition duration-200 hover:font-bold hover:text-prpl"><p class="font-medium text-lg pt-[3px]">Mis acortadores</p></button></a>';
                 // Cerrar sesión
                 echo '<a href="'.$r_auth.'auth?act=logout" class="mr-[10px] float-right pt-[6px]"><button class="bg-malo rounded-full p-[4px] text-white hover:bg-malodo transition duration-300"><p>Cerrar sesión</p></button></a>';
             } else {
@@ -57,15 +56,13 @@ if (file_exists($possible_core_route_a)) {
       </section>
 
       <!-- Section con los items móvil -->
-      <section class="z-20 bg-grisva w-[80%] h-fit fixed top-[9%] left-[18%] rounded-xl p-6 items-center text-center hidden xl:hidden" id="items">
+      <section class="z-20 bg-grisva w-[80%] h-fit fixed top-[9%] left-[18%] rounded-xl p-6 items-center text-center hidden xl:hidden" id="itemsdo">
       <?php if ($_SESSION['lg_in'] == 1) {
                 // Sesión iniciada
                 // Acortar
                 echo '<a href="' .$rp. 'panel"><button class="rounded-full bg-prpl hover:bg-azulnav transtion duration-200 p-1 w-full mb-[25px]">Acortar</button></a>';
                 // Acortadores
-                echo '<a href="#"><button class="rounded-full bg-prpl hover:bg-azulnav transtion duration-200 p-1 w-full mb-[25px]">Mis acortadores</button></a>';
-                // Perfil
-                echo '<a href="#"><button class="rounded-full bg-prpl hover:bg-azulnav transtion duration-200 p-1 w-full mb-[25px]">Perfil</button></a>';
+                echo '<a href="'.$rp.'acortadores"><button class="rounded-full bg-prpl hover:bg-azulnav transtion duration-200 p-1 w-full mb-[25px]">Mis acortadores</button></a>';
                 // Cerrar sesión
                 echo '<a href="'.$r_auth.'auth?act=logout"><button class="rounded-full bg-malo hover:bg-malodo transtion duration-200 p-1 w-full mb-[5px]">Cerrar sesión</button></a>';
       } else {

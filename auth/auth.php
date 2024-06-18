@@ -36,4 +36,3 @@ if ($resultado->num_rows > 0 ) {
 }
 $conexion->close();
 require '../layouts/footer.php';
-?>

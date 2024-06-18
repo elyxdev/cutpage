@@ -13,4 +13,3 @@ if (file_exists($possible_core_route_a)) {
 }
 // Establecer conexión
 $conexion = new mysqli($d_host, $d_usuario, $d_pswd, $d_db);
-?>

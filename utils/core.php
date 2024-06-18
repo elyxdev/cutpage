@@ -7,9 +7,11 @@ $d_usuario = "root";
 $d_pswd = "";
 $d_db = "cutpage";
 
+// Nombre del administrador
+$admin_u = "elyxdev";
+
 // Rutas
-$rp = 'http://localhost/'; // cambiar - ruta para obtener archivos
+$rp = 'http://192.168.1.4/'; // cambiar - ruta para obtener archivos
 $r_static = $rp . "static/";
 $r_auth = $rp . "auth/";
 $r_utils = $rp . "utils/";
-?>
